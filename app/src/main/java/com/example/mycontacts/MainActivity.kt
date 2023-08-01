@@ -23,13 +23,13 @@ class MainActivity: AppCompatActivity() {
         }
     }
     fun displayContact (){
-        val contact1= ContactData("Regina","070987450","regina.com","https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80")
-        val contact2 = ContactData("Winnie","0768593188","sikinyiwinnie@gmail.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
-        val contact3=ContactData("Eunice","078765340","eunice.com","https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80")
-        val contact5=ContactData("Grace","079235380","grace.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
-        val contact8=ContactData("Philiph","070987450","philip.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
-        val contact6=ContactData("Ryan","078765340","ryan.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80 ")
-        val contact7=ContactData("Robert","079874750","robert.com"," https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
+        val contact1= ContactData(0,"Regina","070987450","regina.com","https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80")
+        val contact2 = ContactData(0,"Winnie","0768593188","sikinyiwinnie@gmail.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
+        val contact3=ContactData(0,"Eunice","078765340","eunice.com","https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80")
+        val contact5=ContactData(0,"Grace","079235380","grace.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
+        val contact8=ContactData(0,"Philiph","070987450","philip.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
+        val contact6=ContactData(0,"Ryan","078765340","ryan.com","https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80 ")
+        val contact7=ContactData(0,"Robert","079874750","robert.com"," https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww&w=1000&q=80")
 
     val contactData= mutableListOf<ContactData>(contact1,contact2,contact3,contact5,contact6,contact7,contact8)
     val contactAdapter=ContactRvAdapter(contactData)
