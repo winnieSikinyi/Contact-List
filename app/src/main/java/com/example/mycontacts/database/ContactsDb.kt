@@ -1,8 +1,13 @@
 package com.example.mycontacts.database
 
 import android.content.Context
+import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.mycontacts.ContactData
+
+
+@Database(entities = [ContactData::class], version = 1)
 
 abstract class ContactsDb: RoomDatabase () {
     abstract fun contactDao(): ContactDao

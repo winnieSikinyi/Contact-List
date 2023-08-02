@@ -1,15 +1,17 @@
-package com.example.mycontacts
+package com.example.mycontacts.UI
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
+import com.example.mycontacts.ContactData
+import com.example.mycontacts.database.ViewModel.ContactViewModel
 import com.example.mycontacts.databinding.ActivityMain2Binding
-import com.example.mycontacts.databinding.ContactlListItemBinding
 
 class MainActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityMain2Binding
+    val ContactViewModel: ContactViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater)
@@ -34,7 +36,7 @@ class MainActivity2 : AppCompatActivity() {
         var error = false
 
         if (name1.isEmpty()) {
-            binding.tilFirstName.error = "First Namerequired"
+            binding.tilFirstName.error = "FirstName required"
             Toast.makeText(this, "Please enter phone number", Toast.LENGTH_SHORT).show();
             error = true
         }
@@ -62,7 +64,8 @@ class MainActivity2 : AppCompatActivity() {
             val y = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
-
+        val newContactData = ContactData(0,name1,phone,email,"")
+        ContactViewModel.saveContact(newContactData)
         Toast.makeText(this, "Contact added", Toast.LENGTH_SHORT).show()
         finish()
     }
